@@ -28,8 +28,6 @@ public class MainApp {
       use2.setCar(car2);
       userService.add(use);
       userService.add(use2);
-      car.setUser(use);
-      car2.setUser(use2);
 
       List<User> users = userService.listUsers();
       for (User user : users) {
@@ -40,7 +38,7 @@ public class MainApp {
          System.out.println("Car = "+user.getCar());
          System.out.println();
       }
-      User user = userService.getUserByAuto("BMW", 5);
+      User user = userService.getUserByAuto("Audi", 100);
       System.out.println(user);
       context.close();
    }
